@@ -55,3 +55,56 @@ main section.banner h1{
     text-shadow: 0px 4px 4px rgba(0,0,0,.36);
     padding: 100px;
 }
+
+/* código editado ao vivo dia 23/05/2022 */
+main section.receitas-principais .container {
+    min-height: 600px;
+    width: 1200px; 
+    margin: 0 auto; /* espaçamento para centralizar o container */
+}
+
+main section.receitas-principais h2{
+    color:#FFA000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 55px;
+    text-transform: lowercase;
+}
+
+    /* aqui começa meu arquiinimigo flexbox */
+.lista-receitas{
+    display: flex; 
+    justify-content: space-evenly;    /* espaço igual entre os elementos e as laterais */
+    align-items: flex-start;     /*elementos alinhados ao topo */
+   
+}
+
+.lista-receitas article{
+    /* border: 1px solid orange; */
+    width: 345px; ;
+    text-align: center;
+}
+
+.lista-receitas .thumb{
+    width: 100%;
+    height: 345px;
+    background-color: orange;
+    background-size: cover; /*imagem ocupa todo o espaço*/
+    background-repeat: repeat; /*imagem não se repete*/
+    background-position: center;
+    
+}
+
+.lista-receitas article h3{
+    font-size: 26px;
+}
+
+.lista-receitas article a{
+    background-color: #176902;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 25px;
+    text-decoration: none;
+
+}
