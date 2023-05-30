@@ -46,6 +46,7 @@ main section.banner .container{
     justify-content: flex-end;
     align-items: center;
     height: 600px;
+    max-width: 100%;
 }
 
 main section.banner h1{
@@ -59,6 +60,7 @@ main section.banner h1{
 /* código editado ao vivo dia 23/05/2022 */
 main section.receitas-principais .container {
     min-height: 600px;
+    max-width: 100%;
     width: 1200px; 
     margin: 0 auto; /* espaçamento para centralizar o container */
 }
@@ -123,6 +125,7 @@ section.banner-secundario{
 
 section.banner-secundario .container{
     min-height: 600px;
+    max-width: 100%;
     width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -136,6 +139,7 @@ section.banner-secundario .container h2{
     font-size: 62px;
     color: #fff;
     text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    max-width: 100%;
 }
 
 section.banner-secundario .container p{
@@ -143,6 +147,7 @@ section.banner-secundario .container p{
     font-size: 24px;
     text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
     width: 450px;
+    max-width: 100%;
 }
 
 footer{
@@ -159,6 +164,7 @@ footer .container{
     justify-content: flex-start;
     align-items: center;
     padding: 10px 0;
+    max-width: 100%;
 }
 
 footer p{
@@ -172,6 +178,7 @@ main section.todas-receitas .container {
     width: 1200px;
     margin: 0 auto;
     padding: 50px 0;
+    max-width: 100%; /*altura máxima para se adaptar a diferentes telas*/
 }
 
 main section.todas-receitas h2 {
@@ -188,14 +195,17 @@ main section.todas-receitas h2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    max-width: 100%;
 }
 
 .container-receita-interna main {
     width: 700px;
+    max-width: 100%;
 }
 
 .container-receita-interna main img {
     width: 100%;
+    max-width: 100%;
 }
 
 small.tag {
@@ -244,10 +254,12 @@ section.contato .container {
     margin: 0 auto;
     padding: 50px 0;
     display: flex;
+    max-width: 100%;
 }
 .banner-contato .container h1 {
     color: #fff;
     font-size: 70px;
+    max-width: 100%;
 }
 .banner-vertical {
     width: 30%;
@@ -302,4 +314,52 @@ section.contato .container {
     background-color: green;
     border-color: green;
     cursor: pointer;
+}
+           /* ajuste de responsividade */
+@media (max-width:1100px){
+    .container,
+    .container-receita-interna {
+        width: 900px !important; /*essa regra se torna mais importante que as outras*/
+        max-width: 100% !important;
+    }   
+
+    main section.banner .container{
+        justify-content: flex-start;
+    }
+    .lista-receitas article {
+        width: 250px;
+
+    }
+    .container-receita-interna main{
+        width: 500px;
+    }
+    .container-receita-interna main iframe{
+        width: 100%;
+    }
+    .lista-receitas{
+        flex-direction: column;
+        align-content: center;
+    }
+}
+@media (max-width:900px){
+    .container,
+    .container-receita-interna{
+        width: 800px !important;
+        padding: 0 20px;
+    }
+    .lista-receitas{
+        flex-direction: column;
+        align-content: center;
+    }
+    .lista-receitas article{
+        padding: 10px;
+    }
+}
+
+@media (max-width:400px){
+    footer{
+        font-size: 10px;
+        max-height: 100%; /*ultima atualização dia 30/05/2023:para telas de celulares pequeenas*/
+    }
+    
 }
