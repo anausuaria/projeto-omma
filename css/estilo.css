@@ -357,9 +357,43 @@ section.contato .container {
 }
 
 @media (max-width:400px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
     footer{
         font-size: 10px;
-        max-height: 100%; /*ultima atualização dia 30/05/2023:para telas de celulares pequeenas*/
+        max-height: 100%; /*ultima atualização dia 30/05/2023:para telas pequenas*/
     }
-    
+    main section.banner .container{
+        flex-direction: row-reverse;
+    }
+    main section.banner h1{
+        font-size: 50px;
+        padding: 60px;
+    }
+    section.banner-secundario .container{
+        display: none;
+    }
+    .banner-vertical{
+        display: none;
+    }
+    .formulario{width: 100%;}
+
+    main section.receitas-principais h2{
+     font-size: 40px;
+    }
+ /* atualização dia 02/06/2013: correção alinhamento do rodapé em telas pequenas */
+    footer .container{
+        justify-content: space-evenly; 
+        text-align:justify;
+    }
+    main section.todas-receitas h2{
+       display: flex;
+       align-items: center;
+       text-align: center;
+    }
+
+   
 }
+
